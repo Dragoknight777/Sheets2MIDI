@@ -1,6 +1,0 @@
-[submodule "RFCN-ROOT/model"]
-	path = RFCN-ROOT/model
-	url = https://github.com/kvaikunthan/py-R-FCN.git
-[submodule "RFCN-ROOT/caffe"]
-	path = RFCN-ROOT/caffe
-	url = https://github.com/Microsoft/caffe.git
