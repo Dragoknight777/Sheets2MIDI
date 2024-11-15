@@ -121,13 +121,13 @@ for hn in hn_resized:
     hn[hn > 0] = 1
 
 # Resized images of the 25 notes
-show_masks(qn_resized[:25])
-show_masks(hn_resized[:25])
+# show_masks(qn_resized[:25])
+# show_masks(hn_resized[:25])
 
 
 ### Classification of notes
 
-# Randomly pick an equal number of quarter-notes.
+# Randomly pick an equal number of quarter-notes and half-notes
 n_hn = len(hn_resized)
 import random
 random.shuffle(qn_resized)
@@ -171,4 +171,4 @@ y_test_pred = clf.predict(X_test)
 
 # Running the classifier
 from sklearn.metrics import classification_report
-print(classification_report(y_test, y_test_pred, target_names=['half', 'quarter']))
+# print(classification_report(y_test, y_test_pred, target_names=['half', 'quarter']))
