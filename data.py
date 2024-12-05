@@ -2,7 +2,7 @@ import os
 from muscima.io import parse_cropobject_list
 
 # Change to reflect where MUSCIMA data lives
-CROPOBJECT_DIR = os.path.join(os.environ['HOME'], '/Users/nathantran/Desktop/Sheets2MIDI/v1.0/data/cropobjects_manual')
+CROPOBJECT_DIR = 'v1.0/data/cropobjects_manual'
 
 cropobject_fnames = [os.path.join(CROPOBJECT_DIR, f) for f in os.listdir(CROPOBJECT_DIR)]
 docs = [parse_cropobject_list(f) for f in cropobject_fnames]
@@ -106,8 +106,8 @@ def show_masks(masks, row_length=5):
     plt.show()
 
 # Visualizes 25 of the notes
-# show_masks(qn_images[:25])
-# show_masks(hn_images[:25])
+show_masks(qn_images[:25])
+show_masks(hn_images[:25])
 
 # Resizing the notes to 40x10
 from skimage.transform import resize
